@@ -1,3 +1,2 @@
-🍵Ensinamentos da matéria CE302
->>>
-Para ir, é necessário atravessar ...? 
+# 🍵Ensinamentos da matéria CE302
+Ai como estou ganhando neurônios 
