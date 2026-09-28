@@ -1,0 +1,159 @@
+# Tipos de dados
+
+## Numéricos
+
+```{r}
+(numero_1 <- 15)
+typeof(numero_1)
+
+(numero_2 <- 1.5)
+typeof(numero_2)
+```
+
+## Caracter
+
+```{r}
+(uma_letra <- "c")
+typeof(uma_letra)
+
+(texto <- "uma mensagem de texto")
+typeof(texto)
+```
+
+## Lógicos
+
+TRUE -> Verdadeiro
+FALSE -> Falso
+```{r}
+(boleano <- TRUE)
+typeof(boleano)
+```
+
+```{r}
+(bool <- T)
+typeof(bool)
+```
+
+# Estruturas de dados
+
+## Vetor
+
+```{r}
+(vetor_1 <- c(1, 2, 3, 4, 5))
+is.vector(vetor_1)
+```
+
+```{r}
+(vetor_2 <- c("a", "b", "c"))
+is.vector(vetor_2)
+```
+
+```{r}
+vetor_3 <- c(TRUE, TRUE, FALSE, FALSE, TRUE)
+vetor_3
+is.vector(vetor_3)
+```
+
+## Matriz
+
+```{r}
+mat_1 <- matrix(c(T, T, F, F, T, F), nrow = 2)
+mat_1
+```
+
+```{r}
+mat_2 <- matrix(c("a", "b", 
+                  "c", "d"), 
+                nrow = 2,
+                byrow = T)
+mat_2
+```
+
+## Array (vetor)
+
+```{r}
+meu_array <- array(c(1:24), c(4, 3, 2))
+meu_array
+```
+
+## Data Frames
+
+```{r}
+(vec_num   <- c(1, 2, 3))
+(vec_char  <- c("a", "b", "c"))
+(vec_bool  <- c(T, F, T))
+```
+
+```{r}
+df1 <- cbind(vec_num, vec_char, vec_bool)
+df1
+```
+
+```{r}
+df2 <- as.data.frame(cbind(vec_num, vec_char, vec_bool))
+df2
+```
+
+## Listas
+
+```{r}
+obj_1 <- c(1, 2, 3)
+obj_2 <- c("a", "b", "c", "d")
+obj_3 <- c(T, F, T, T, F)
+
+lista_1 <- list(obj_1, obj_2, obj_3)
+lista_1
+```
+
+```{r}
+lista_2 <- list(obj_1, obj_2, obj_3, lista_1)
+lista_2
+```
+
+# Coerção de tipos
+
+## Coerção automática
+
+```{r}
+(novo_tipo <- c(1, "b", TRUE))
+typeof(novo_tipo)
+```
+
+## Coerção de numérico para inteiro
+
+```{r}
+(numero <- 5)
+typeof(numero)
+
+(inteiro <- as.integer(numero))
+typeof(inteiro)
+```
+
+## Coerção de carácter para numérico
+
+```{r}
+(numeros <- c("1", "2", "3"))
+typeof(numeros)
+
+(numeros_2 <- as.numeric(numeros))
+typeof(numeros_2)
+```
+
+## Coerção matriz para dataframe
+
+```{r}
+(mat <- matrix(1:9, nrow= 3))
+is.matrix(mat)
+
+(df <- as.data.frame(mat))
+is.data.frame(df)
+```
+
+# Limpeza
+
+```{r}
+rm(list = ls()) 
+cat("\014")
+```
+
+Limpeza feita 😉
