@@ -1,0 +1,44 @@
+# Carregando pacotes
+
+```{r}
+if (!require("pacman")) install.packages("pacman")
+
+pacman::p_load(pacman, party, rio, tidyverse)
+```
+pacman: para carregar/remover pacotes
+party: para calcular árvores de decisão
+rio: para importar dados
+tidyverse: por muitas razões
+
+# Carregando e preparando dados
+
+```{r}
+(df <- read_csv("dados/StateData.csv"))
+```
+
+```{r}
+(df2 <- import("dados/StateData.xlsx") %>% as_tibble())
+```
+
+Ou...
+```{r}
+df <- import("dados/StateData.xlsx") %>%
+  as_tibble() %>%
+  select(state_code, 
+    psychRegions,
+    instagram:modernDance) %>% 
+  mutate(psychRegions = as.factor(psychRegions)) %>%
+  rename(y = psychRegions) %>%
+  print()
+```
+
+# Limpeza
+
+```{r}
+rm(list = ls()) 
+p_unload(all)  # Remove todos os pacotes
+dev.off()
+cat("\014")  # ctrl+L
+```
+
+Limpeza feita 😉
