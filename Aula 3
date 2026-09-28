@@ -1,0 +1,23 @@
+
+```{r}
+plot(c(1,3,5,8,10))  # gráfico
+```
+
+# Título de nível 1
+
+Um texto simples, _essa parte está em italico_ e **essa outra parte está em
+negrito**.
+
+## Título de nível 2
+
+### Título de nível 3
+
+# Limpeza
+
+```{r}
+rm(list = ls())
+dev.off()
+cat("\014")
+```
+
+Limpeza feita 
