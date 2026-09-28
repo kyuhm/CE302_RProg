@@ -1,0 +1,55 @@
+# Instalando e carregando pacotes
+
+```{r results='hide'}
+install.packages("pacman")  # instalando o pacman (PACkage MANager)
+```
+
+```{r results='hide'}
+if (!require("pacman")) install.packages("pacman")
+```
+
+```{r results='hide'}
+pacman::p_load(pacman, party, psych, rio, tidyverse)
+```
+
+```{r}
+library(datasets)  # ou library("datasets")
+```
+
+# Carregando e preparando os dados
+
+## Usando CSVs
+
+```{r}
+df <- read_csv("dados/StateData.csv")
+head(df)
+```
+
+## Com outros tipos de dados
+
+```{r}
+df <- import("dados/StateData.xlsx") %>% as_tibble()
+head(df)
+```
+
+```{r}
+df <- import("dados/StateData.xlsx") %>%  # rio::import
+  as_tibble() %>%
+  select(state_code, 
+    psychRegions,
+    instagram:modernDance) %>% 
+  mutate(psychRegions = as.factor(psychRegions)) %>%
+  rename(y = psychRegions) %>%
+  print()
+```
+
+# Limpeza
+
+```{r}
+rm(list = ls()) 
+p_unload(all)
+detach("package:datasets", unload = TRUE)
+cat("\014")
+```
+
+Limpeza feita 
