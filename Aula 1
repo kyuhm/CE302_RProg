@@ -1,0 +1,95 @@
+# Comandos Básicos
+
+```{R}
+print("Olá mundo!")
+```
+
+```{R}
+2+2
+```
+
+```{R}
+0:100
+```
+
+# Armazenando valores em variáveis
+
+## Valores individuais
+
+```{r}
+a <- 1
+```
+
+```{r}
+2 -> b
+```
+
+```{r}
+c <- d <- e <- 3
+```
+
+## Múltiplos valores
+
+```{r}
+x <- c(1, 2, 5, 9)
+x
+```
+
+# Sequências
+
+```{r}
+0:10
+```
+
+```{r} 
+10:0
+```
+
+```{r}
+seq(10)  # Crescente de 1 a 10
+seq(30, 0, by = -3)  # Decrescendo de 3 em 3
+```
+
+# Matemática básica
+
+```{r}
+(y <- c(5, 1, 0, 10))
+```
+
+```{r}
+x + y
+```
+
+```{r}
+x * 2
+```
+
+```{r}
+2^6
+```
+
+```{r}
+sqrt(64)
+```
+
+```{r}
+log(100)
+```
+
+```{r}
+log10(100)
+```
+
+# Limpeza
+
+Limpando o ambiente
+```{r}
+rm(list = ls()) 
+```
+
+Limpando o console
+```{r}
+cat("\014")
+```
+
+Limpeza terminada 😉
