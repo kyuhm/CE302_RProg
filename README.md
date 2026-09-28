@@ -1,2 +1,2 @@
 # 🍵Ensinamentos da matéria CE302
-Ai como estou ganhando neurônios 
+Terror da Lovelace
